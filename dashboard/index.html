@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PM Dashboard</title>
+
+    <!-- material isons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <!-- css style -->
+    <link rel="stylesheet" href="./src/style.css" />
+    <!-- библиотека для построения графиков -->
+    <script src="./src/plotly.min.js"></script>
+
+    <!-- dropdown menu -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./src/images/logo.png" alt="лого" />
+            <h2 class="text-muted">PM Dashboard</h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <!-- class="active" -->
+          <a id="home-btn">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <!-- выбор оборудования -->
+          <div class="select-menu">
+            <div class="select-btn">
+              <a id="equip-btn">
+                <span class="material-icons-sharp"> heat_pump </span>
+                <h3>Список оборудования</h3>
+              </a>
+              <ul class="options">
+                <li class="option" id="engine-btn1">
+                  <span class="option-text">Двигатель АИР 1</span>
+                </li>
+                <li class="option" id="engine-btn2">
+                  <span class="option-text">Двигатель АИР 2</span>
+                </li>
+                <li class="option" id="engine-btn3">
+                  <span class="option-text">Двигатель АИР 3</span>
+                </li>
+                <li class="option" id="engine-btn4">
+                  <span class="option-text">Дымосос</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="/">
+            <span class="material-icons-sharp"> info </span>
+            <h3>Другое</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main id="main"></main>
+      <div id="right-main"></div>
+      <div></div>
+    </div>
+
+    <!-- ---here start JS script -->
+    <script src="./src/plots.js"></script>
+    <script src="./src/action.js"></script>
+    <script src="./src/dropDownMenu.js"></script>
+  </body>
+</html>
